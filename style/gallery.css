@@ -1,0 +1,539 @@
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.search-txt::-moz-placeholder,
+:-moz-placeholder {
+  color: #9e9d52;
+}
+
+.gallery-slider {
+  margin-left: auto;
+}
+
+.small-bg {
+  position: relative;
+}
+
+.header {
+  position: relative;
+  z-index: 2;
+}
+
+.small-bg::after {
+  content: "";
+  display: block;
+  background-color: rgba(33, 37, 32, 0.3);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.swiper {
+  max-width: 86%;
+  margin-left: auto;
+  margin-right: 30px;
+  padding-top: 142px;
+  padding-bottom: 109px;
+  margin-top: 75px;
+}
+
+.slider3__item {
+  width: 100%;
+  transition: all 0.3s ease 0s;
+  height: 277px;
+}
+
+.swiper-slide-next {
+  flex-shrink: 3;
+  transition: 0.3s;
+}
+
+.swiper-wrapper {
+  gap: 3px;
+}
+
+.swiper-slide-active img {
+  transform: scale(1.7);
+}
+
+.swiper-horizontal>.swiper-pagination-fraction {
+  bottom: inherit;
+  top: 0;
+  left: 0;
+}
+
+.swiper-pagination {
+  text-align: left;
+}
+
+.swiper-slide-prev {
+  opacity: 1;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-repeat: repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: inherit;
+  top: 12%;
+  width: 58px;
+  height: 58px;
+  opacity: 1;
+}
+
+.swiper-button-next {
+  background-image: url(../img/arrow-right-green.svg);
+  right: 22%;
+}
+
+.swiper-button-prev {
+  background-image: url(../img/arrow-left-green.svg);
+  right: 29%;
+}
+
+.swiper-pagination {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.swiper-pagination::before {
+  content: "фото";
+  margin-right: 5px;
+}
+
+.swiper-pagination-total {
+  color: #9e9d52;
+}
+
+.select-big::after {
+  content: "";
+  display: none;
+  border-bottom: 1px solid #fff;
+  width: 289px;
+  position: absolute;
+  right: 0;
+  top: 89%;
+}
+
+.form_wrap {
+  display: flex;
+  align-items: center;
+}
+
+.search-btn:hover::after {
+  border: 1px solid transparent;
+}
+
+.search-txt {
+  top: inherit;
+  bottom: 14px;
+  right: 78px;
+}
+.drop-down {
+  display: none;
+}
+
+@media (max-width: 1360px) {
+  .container {
+    padding: 0 40px;
+  }
+
+  .swiper-slide-active-mod img {
+    transform: scale(1.6);
+  }
+
+  .service-flex {
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .select-big {
+    margin-right: 6%;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  .search-txt {
+    font-size: 18px;
+    width: 33vw;
+    line-height: 60%;
+  }
+
+  .menu-select-big {
+    font-size: 24px;
+    margin-left: 0;
+  }
+
+  .title-extra-large {
+    font-size: 8.8vw;
+    line-height: 87%;
+  }
+
+  .enroll-online-wrapper {
+    position: relative;
+    margin-left: 8%;
+  }
+
+  .enroll-online-btn {
+    position: absolute;
+    right: 4.2%;
+    top: 0;
+  }
+
+  .footer-line {
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  .swiper {
+    max-width: 85%;
+  }
+
+  .slider3__item {
+    height: 250px;
+  }
+
+  .swiper-slide-active-mod img {
+    object-fit: contain;
+  }
+
+  .swiper-button-next {
+    right: 20%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .swiper-button-next {
+    right: 14%;
+  }
+
+  .swiper-button-prev {
+    right: 24%;
+  }
+
+  .slider3__item {
+    height: 200px;
+  }
+}
+
+@media (max-width: 1040px) {
+  h1 {
+    max-width: 370px;
+  }
+
+  .select-big::after {
+    width: 100%;
+  }
+
+  .select-big {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .enroll-online-wrapper {
+    margin-left: 3%;
+  }
+
+  .title-extra-large {
+    font-size: 7.5vw;
+  }
+
+  .slider3__item {
+    height: 180px;
+  }
+
+  .swiper {
+    max-width: 90%;
+  }
+
+  .search-box {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 25px;
+  }
+
+  .header {
+    padding: 0;
+    padding-top: 25px;
+  }
+
+  .menu-select-big {
+    font-size: 18px;
+    width: 105%;
+  }
+
+  .search-btn_contain-gallery {
+    display: none;
+  }
+
+  .select-big::after {
+    right: 0;
+  }
+
+  .services-title {
+    max-width: 255px;   
+  }
+
+  .service-flex {
+    margin-top: 0;
+  }
+
+  .small-bg {
+    height: 350px;
+  }
+
+  .logo {
+    width: 209px;
+    height: 44px;
+  }
+
+  .swiper-slide-active img {
+    transform: scale(1.5);
+  }
+
+  .navbar {
+    margin-top: 23px;
+  }
+
+  .swiper {
+    max-width: 100%;
+    margin-right: 25px;
+    margin-left: 25px;
+    padding-top: 110px;
+    padding-bottom: 80px;
+    margin-top: 60px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 22%;
+    width: 44px;
+    height: 44px;
+  }
+
+  .header-nav {
+    display: none;
+  }
+/* 
+  .burger-btn {
+    display: block;
+    margin-left: 2.5vw;
+  } */
+
+  .title-extra-large2 {
+    margin-left: 14%;
+  }
+
+  .enroll-online-wrapper {
+    margin-left: 0;
+    margin-top: 70px;
+    margin-bottom: 90px;
+    justify-content: space-between;
+  }
+
+  .enroll-online-action {
+    max-width: 243px;
+    font-size: 13px;
+    line-height: 1.4;
+    margin-left: 10px;
+    margin-top: 150px;
+  }
+
+  .enroll-online-btn {
+    width: 100.84px;
+    height: 103.5px;
+  }
+
+  .footer-flex {
+    gap: 0;
+  }
+
+  .footer-social {
+    margin-left: 22px;
+  }
+
+  .social {
+    font-size: 12px;
+  }
+
+  .copyright {
+    font-size: 12px;
+  }
+
+}
+
+@media (max-width: 570px) {
+  .footer-line {
+    display: none;
+  }
+
+  .footer-flex {
+    gap: 0;
+    flex-direction: column;
+    align-items: initial;
+  }
+
+  .footer-social {
+    gap: 0;
+    margin-left: 0;
+  }
+
+  .enroll-online-wrapper {
+    margin-bottom: 70px;
+  }
+
+  .footer {
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+
+  .social {
+    font-size: 14px;
+  }
+
+  .copyright {
+    font-size: 10px;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 567px) {
+  .container {
+    padding: 0 24px;
+    position: relative;
+  }
+  .logo {
+    display: block;
+    background: url("../img/logo_mobile.svg");
+    width: 46px;
+    height: 40.89px;
+    margin-right: 0;
+  }
+  .drop-down {
+    display: flex;
+  }
+  .drop-down_mobile-menu ._mob {
+    color: white;
+  }
+  .services-title {
+    text-align: center;
+  }
+  .service-flex {
+    margin-top: 22px;
+  }
+  .small-bg::after {
+    display: none;
+  }
+  .header-flex {
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .header-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  .menu-select-big {
+    display: none;
+  }
+  .drop-down {
+    margin-top: 6px;
+  }
+  .burger-btn {
+    /* background: url('../img/burger_menu-black.svg');
+    background-size: auto;
+    background-size: auto;
+    background-size: cover;
+    width: 24px;
+    height: 9.5px;
+    position: absolute;
+    right: 6%;
+    top: 12px; */
+
+  }
+
+  .small-bg {
+    height: auto;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 23px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+
+  .swiper-button-prev {
+    right: 52px;
+  }
+
+  .swiper {
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-top: 13%;
+    padding-bottom: 10%;
+    margin-top: 30px;
+  }
+
+  .swiper-pagination {
+    font-size: 11px;
+  }
+
+  .title-extra-large {
+    font-size: 42px;
+    line-height: .8;
+  }
+}
+
+@media (max-width: 420px) {
+  .enroll-online-wrapper {
+    flex-direction: column;
+  }
+
+  .enroll-online-btn {
+    position: inherit;
+    margin: 0 auto;
+    width: 80.15px;
+    height: 82.26px;
+  }
+
+  .enroll-online-action {
+    max-width: 200px;
+    font-size: 12px;
+    margin-left: 0;
+    margin-top: 20px;
+    order: 3;
+  }
+
+  .enroll-online-title {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .swiper {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+}

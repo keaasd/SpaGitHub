@@ -5,8 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Услуги и цены</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="./style/serv-menu-mob.css">
 </head>
 <body>
     <div class="small-bg">
@@ -22,9 +30,9 @@
                             <div class="drop-down_pin">
                                 <img src="./img/pin.svg" class="pin">
                             </div>
-                            <select class="menu-select">
+                            <select class="menu-select _desk">
                                 <option value="">в Павшинской пойме</option>
-                                <option value="down">Проспект Маршала Жукова</option>
+                                <!-- <option value="down">Проспект Маршала Жукова</option> -->
                             </select>
                         </div>
                     </div>
@@ -36,11 +44,21 @@
                             <li class="header-nav_list"><a class="header-nav_link" href="certificate.html">Сертификаты</a></li>
                             <li class="header-nav_list"><a class="header-nav_link" href="contacts.html">Контакты</a></li>
                         </ul>
-                        <form class="search-box" action="" method="get">
-                            <input class="search-txt" name="" placeholder="" type="search">
-                            
-                          </form>
-                          <button class="search-btn" type="submit"></button>
+                        <div class="form_wrap">
+                            <form class="search-box" action="" method="get">
+                              <input class="search-txt" name=""
+                                placeholder="введите слово или фразу"
+                                type="search"/>
+                              <div class="search-btn_contain">
+                                <button class="search-btn" type="submit"></button>
+                              </div>
+                            </form>
+                            <button
+                              class="burger-btn header-burger"
+                              onclick="openModal()"
+                              type="button"
+                            ></button>
+                          </div>
                     </nav>
                 </div>
                 <div class="service-flex">
@@ -53,41 +71,73 @@
     <section class="SPA">
         <div class="container">
             <ul class="categories">
-               <li><a href="services.html" class="category-item active">Тайские уходы</a></li>
+               <li><a href="services.html" class="category-item active">Тайские&nbsp;уходы</a></li>
                <li><a href="hamam.html" class="category-item">Хамам</a></li>
-               <li><a href="#" class="category-item">SPA программы</a></li>
-               <li><a href="spa-for-two.html" class="category-item">SPA программы для двоих</a></li> 
-               <li><a href="#" class="category-item">SPA уходы для лица</a></li>   
-               <li><a href="#" class="category-item">Коррекция фигуры и похудение</a></li>     
-               <li><a href="#" class="category-item">Комплексные уходы</a></li>
-               <li><a href="#" class="category-item">Пилинги</a></li>   
+               <li><a href="SPA-programs.html" class="category-item">SPA&nbsp;программы</a></li>
+               <li><a href="spa-for-two.html" class="category-item">SPA&nbsp;программы&nbsp;для&nbsp;двоих</a></li> 
+               <li><a href="spa-facial.html" class="category-item">SPA&nbsp;уходы&nbsp;для&nbsp;лица</a></li>   
+               <li><a href="slimming.html" class="category-item">Коррекция&nbsp;фигуры&nbsp;и&nbsp;похудение</a></li>     
+               <li><a href="complex-treatments.html" class="category-item">Комплексные&nbsp;уходы</a></li>
+               <li><a href="peelings.html" class="category-item">Пилинги</a></li>   
             </ul>
+
+          <!-- MOBILE DROP-DOWN MENU Categories -->
+            <div class="drop-down-categories"> 
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li><a href="services.html" class="menu__link disabled">Тайские&nbsp;уходы</a>
+                            <span class="menu__arrow arrow"></span>
+                            <ul class="sub-menu__list">
+                                <li><a href="hamam.html" class="sub-menu__link">Хамам</a></li>
+                                <li><a href="SPA-programs.html" class="sub-menu__link">SPA&nbsp;программы</a></li>
+                                <li><a href="spa-for-two.html" class="sub-menu__link">SPA&nbsp;программы&nbsp;для&nbsp;двоих</a></li>
+                                <li><a href="spa-facial.html" class="sub-menu__link">SPA&nbsp;уходы&nbsp;для&nbsp;лица</a></li>
+                                <li><a href="slimming.html" class="sub-menu__link">Коррекция&nbsp;фигуры&nbsp;и&nbsp;похудение</a></li>
+                                <li><a href="complex-treatments.html" class="sub-menu__link">Комплексные&nbsp;уходы</a></li>
+                                <li><a href="peelings.html" class="sub-menu__link">Пилинги</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+             </div>
+            <a href="tel:+79250332100" class="btn-phone-green-black _serv"></a>
         </div>
     </section>
     <section class="SPA-cards">
        <div class="container">
         <ul class="cards-list-grid">
-            <li class="card-item">
-                <div class="card-item-pic card-item-pic1">
+            <li class="card-item _serv">
+                <div class="card-item-pic">
                     <img src="./img/yoga.png" alt="">
                 </div>
-                <!-- <a href="#" class="btn-reg">Записаться на процедуру</a> -->
                 <div class="col-right">
                     <h3 class="card-title">Тайская йога</h3>
                     <div class="time-price">
-                        <span class="time">60 минут</span>
+                        <span class="time">45 минут</span>
                         <span class="price">2100 ₽</span>
                     </div>
                     <div class="line"></div>
-                    <p class="card-text">Представьте, что ваш позвоночник удлиняется, таз и&nbsp;плечи раскрываются&nbsp;&mdash; и&nbsp;все это без единого усилия с&nbsp;вашей стороны. Вы&nbsp;лишь расслабляетесь. Тайская йога, или, как ее&nbsp;еще называют, &laquo;пассивная&raquo; йога&nbsp;&mdash; это определенный вид работы с&nbsp;телом, древнейшее искусство исцеления, появившееся еще во&nbsp;времена Будды. Эта тайская методика очень глубока и&nbsp;сочетает работу на&nbsp;уровне всех оболочек тела&nbsp;&mdash; физической, энергетической, эмоциональной и&nbsp;духовной.</p>
-                    <a href="#" class="card-link-details">подробнее</a>
+                   
+                </div>
+                <p class="card-text">Представьте, что ваш позвоночник удлиняется, таз и&nbsp;плечи раскрываются&nbsp;&mdash; и&nbsp;все это без единого усилия с&nbsp;вашей стороны. Вы&nbsp;лишь расслабляетесь. Тайская йога, или, как ее&nbsp;еще называют, &laquo;пассивная&raquo; йога&nbsp;&mdash; это определенный вид работы с&nbsp;телом, древнейшее искусство </p>
+                <div class="text-hidden _1">
+                    <div class="show-more-text">
+                        <p>исцеления, появившееся еще во&nbsp;времена Будды. Эта тайская методика очень глубока и&nbsp;сочетает работу на&nbsp;уровне всех оболочек тела&nbsp;&mdash; физической, энергетической, эмоциональной и&nbsp;духовной. Мастер старается побудить тело того, с кем он работает, к самовосстановлению и саморегенерации. Выполняется в удобной одежде, лежа на мате. Цель – профилактика и оздоровление всего организма через снятие физических блоков и психологического напряжения.</p>
+                            <h4 class="result">Результат:</h4>
+                            <ul class="show-more-list">
+                                <li>&mdash;&nbsp;снимает стресс и хроническую усталость</li>
+                                <li>&mdash;&nbsp;улучшает кровообращение</li>
+                                <li>&mdash;&nbsp;снимает мышечную усталость и увеличивает подвижность суставов</li>
+                            </ul>
+                    </div>
+                    <a href="#" class="show-more-btn _1">подробнее</a>
                 </div>
             </li>
-            <li class="card-item">
-                <div class="card-item-pic card-item-pic2">
+            <li class="card-item _serv">
+                <div class="card-item-pic">
                     <img src="./img/classical.png" alt="">
                 </div>
-                <!-- <a href="#" class="btn-reg">Записаться на процедуру</a> -->
+                
                 <div class="col-right">
                     <h3 class="card-title">Классическая тайская процедура</h3>
                     <div class="time-price">
@@ -105,17 +155,30 @@
                         <span class="price">4000 ₽</span>
                     </div>
                     <div class="line"></div>
-                    <p class="card-text">Техника тайской процедуры сочетает надавливание, скручивание и&nbsp;растягивание и&nbsp;основывается на&nbsp;воздействии с&nbsp;помощью стоп, локтей и&nbsp;кистей. При&nbsp;этом нагрузка на&nbsp;различные группы мышц сравнима&nbsp;с</p>
-                    <a href="#" class="card-link-details">подробнее</a>
+                  
+                </div>
+                <p class="card-text">Техника тайской процедуры сочетает надавливание, скручивание и&nbsp;растягивание и&nbsp;основывается на&nbsp;воздействии с&nbsp;помощью</p>
+                <div class="text-hidden _2">
+                   <div class="show-more-text">
+                    <p>стоп, локтей и&nbsp;кистей. При&nbsp;этом нагрузка на&nbsp;различные группы мышц сравнима&nbsp;с посещением спортзала. Выполняется в удобной одежде, лежа на мате.</p>
+                    <h4 class="result">Результат:</h4>
+                    <ul class="show-more-list">
+                        <li>&mdash;&nbsp;снимает стресс и хроническую усталость</li>
+                        <li>&mdash;&nbsp;улучшает кровообращение</li>
+                        <li>&mdash;&nbsp;влияет на ускорение обмена веществ</li>
+                        <li>&mdash;&nbsp;снимает мышечную усталость и увеличивает подвижность суставов</li>
+                    </ul>
+                   </div>
+                    <a href="#" class="show-more-btn _2">подробнее</a>
                 </div>
             </li>
-            <li class="card-item">
-                <div class="card-item-pic card-item-pic3">
+            <li class="card-item _serv">
+                <div class="card-item-pic">
                     <img src="./img/oil-treatment.png" alt="">
                 </div>
-                <!-- <a href="#" class="btn-reg">Записаться на процедуру</a> -->
+                
                 <div class="col-right">
-                    <h3 class="card-title card-title3">Ароматическая<br>ойл-процедура</h3>
+                    <h3 class="card-title card-title3">Ароматическая<br> ойл-процедура</h3>
                     <div class="time-price">
                         <span class="time">60 минут</span>
                         <span class="price">2500 ₽</span>
@@ -130,16 +193,15 @@
                         <span class="time">120 минут</span>
                         <span class="price">4000 ₽</span>
                     </div>
-                    <div class="line"></div>
-                    <p class="card-text">Расслабляющая процедура с&nbsp;использованием ароматических масел. Имеет расслабляющее, успокаивающее и&nbsp;восстанавливающее действие на&nbsp;нервную систему. Поэтому ее&nbsp;можно считать идеальным</p>
-                    <a href="#" class="card-link-details">подробнее</a>
+                    <div class="line"></div>                    
                 </div>
+                <p class="card-text">Расслабляющая процедура с&nbsp;использованием ароматических масел. Имеет расслабляющее, успокаивающее и&nbsp;восстанавливающее действие на&nbsp;нервную систему. Поэтому ее&nbsp;можно считать идеальным средством в борьбе со стрессом.</p>
             </li>
-            <li class="card-item">
-                <div class="card-item-pic card-item-pic4">
+            <li class="card-item _serv">
+                <div class="card-item-pic">
                    <img src="./img/oil-sport.png" alt="">
                 </div>
-                <!-- <a href="#" class="btn-reg">Записаться на процедуру</a> -->
+               
                 <div class="col-right">
                     <h3 class="card-title card-title4">Ароматическая ойл-процедура для спортсменов</h3>
                     <div class="time-price">
@@ -157,31 +219,34 @@
                         <span class="price">4000 ₽</span>
                     </div>
                     <div class="line"></div>
-                    <p class="card-text">Процедура незаменима для профессиональных атлетов и&nbsp;людей, ведущих активный образ жизни. В&nbsp;результате интенсивного воздействия ускоряется восстановление</p>
-                    <a href="#" class="card-link-details">подробнее</a>
+                   
+                </div>
+                <p class="card-text">Процедура незаменима для профессиональных атлетов и&nbsp;людей,</p>
+                <div class="text-hidden _3">
+                    <p class="show-more-text">ведущих активный образ жизни. В&nbsp;результате интенсивного воздействия ускоряется восстановление поврежденных мышц, тело становится более гибким и выносливым.</p>
+                    <a href="#" class="show-more-btn">подробнее</a>
                 </div>
             </li>
-            <li class="card-item">
-                <div class="card-item-pic card-item-pic5">
+            <li class="card-item _serv">
+                <div class="card-item-pic">
                     <img src="./img/4hands.png" alt="">
                 </div>
-                <!-- <a href="#" class="btn-reg">Записаться на процедуру</a> -->
+               
                 <div class="col-right">
                     <h3 class="card-title">Ароматическая ойл-процедура в 4 руки</h3>
                     <div class="time-price">
                         <span class="time">60 минут</span>
                         <span class="price">4600 ₽</span>
                     </div>
-                    <div class="line"></div>
-                    <p class="card-text">Синхронное исполнение комплексного ухода с&nbsp;арома-маслом двумя мастерами. Благодаря интенсивному воздействию, процедура позволяет телу максимально быстро избавиться от&nbsp;усталости</p>
-                    <a href="#" class="card-link-details">подробнее</a>
+                    <div class="line"></div>                    
                 </div>
+                <p class="card-text">Синхронное исполнение комплексного ухода с&nbsp;арома-маслом двумя мастерами. Благодаря интенсивному воздействию, процедура позволяет телу максимально быстро избавиться от&nbsp;усталости</p>
             </li>
-            <li class="card-item">
-                <div class="card-item-pic card-item-pic6">
+            <li class="card-item _serv">
+                <div class="card-item-pic">
                     <img src="./img//neck.png" alt="">
                 </div>
-                <!-- <a href="#" class="btn-reg">Записаться на процедуру</a> -->
+                
                 <div class="col-right">
                     <h3 class="card-title">Процедура для спины и шейно-воротниковой зоны</h3>
                     <div class="time-price">
@@ -189,15 +254,19 @@
                         <span class="price">2500 ₽</span>
                     </div>
                     <div class="line"></div>
-                    <p class="card-text">Воротниковая область – одно из самых малоподвижных мест нашего тела. Поэтому именно в ней часто возникают застойные явления, защемления позвонков, появляются отечность и боли. Результатом процедуры является улучшение кровообращения, снятие напряжения и зажимов. Проработка данной области позволяет</p>
-                    <a href="#" class="card-link-details">подробнее</a>
+                   
+                </div>
+                <p class="card-text">Воротниковая область – одно из самых малоподвижных мест нашего тела. Поэтому именно в ней часто возникают застойные явления, защемления позвонков, появляются отечность и боли.</p>
+                <div class="text-hidden _4">
+                    <p class="show-more-text">Результатом процедуры является улучшение кровообращения, снятие напряжения и зажимов. Проработка данной области позволяет избавиться от головных и спинных болей, бессонницы, снимает отечности и припухлости.</p>
+                    <a href="#" class="show-more-btn">подробнее</a>
                 </div>
             </li>
-            <li class="card-item">
-                <div class="card-item-pic card-item-pic7">
+            <li class="card-item _serv">
+                <div class="card-item-pic">
                     <img src="./img/facial.png" alt="">
                 </div>
-                <!-- <a href="#" class="btn-reg">Записаться на процедуру</a> -->
+                
                 <div class="col-right">
                     <h3 class="card-title">Процедура для лица и головы</h3>
                     <div class="time-price">
@@ -205,53 +274,55 @@
                         <span class="price">1500 ₽</span>
                     </div>
                     <div class="line"></div>
-                    <p class="card-text">Способствует расслаблению мышц лица и&nbsp;разглаживанию морщин.
-                        В&nbsp;области головы находятся жизненно важные точки, которые отвечают за&nbsp;состояние нервной системы и&nbsp;кровеносных сосудов. Их&nbsp;стимуляция поможет снять усталость и&nbsp;раздражение, избавит от&nbsp;головной боли и&nbsp;активизирует рост волос.</p>
-                    <a href="#" class="card-link-details">подробнее</a>
+                   
                 </div>
+                <p class="card-text">Способствует расслаблению мышц лица и&nbsp;разглаживанию морщин.
+                    В&nbsp;области головы находятся жизненно важные точки, которые отвечают за&nbsp;состояние нервной системы и&nbsp;кровеносных сосудов. Их&nbsp;стимуляция поможет снять усталость и&nbsp;раздражение, избавит от&nbsp;головной боли и&nbsp;активизирует рост волос.</p>
             </li>
-            <li class="card-item">
-                <div class="card-item-pic card-item-pic8">
+            <li class="card-item _serv">
+                <div class="card-item-pic">
                     <img src="./img/herbal.png" alt="">
                 </div>
-                <!-- <a href="#" class="btn-reg">Записаться на процедуру</a> -->
+               
                 <div class="col-right">
                     <h3 class="card-title">Тайская процедура травяными мешочками</h3>
                     <div class="time-price">
                         <span class="time">60 минут</span>
-                        <span class="price">1500 ₽</span>
+                        <span class="price">2700 ₽</span>
                     </div>
                     <div class="line"></div>
-                    <p class="card-text">Воротниковая область&nbsp;&mdash; одно из&nbsp;самых малоподвижных мест нашего тела. Поэтому именно в&nbsp;ней часто возникают застойные явления, защемления позвонков, появляются отечность и&nbsp;боли. Результатом процедуры является улучшение кровообращения, снятие напряжения и&nbsp;зажимов. Проработка данной области позволяет</p>
-                    <a href="#" class="card-link-details">подробнее</a>
+                   
                 </div>
+                <p class="card-text">Процедура проводится с помощью горячих мешочков с травяными сборами. Тайские травы обладают хорошим проникающим действием. Уход оказывает глубокое расслабляющее, прогревающее и оздоравливающее воздействие, быстро восстанавливает организм после болезни, стрессов или физических нагрузок.</p>
             </li>
         </ul>
        </div>
     </section>
     <section class="reg-SPA">
-        <div class="online-reg">
-            <div class="online-reg-left">
-               <div class="reg-left-wrapper">
-                    <h2 class="online-reg-title">Запись онлайн</h2>
-                    <form class="online-reg-form">
-                        <input type="text" class="form-input form-input-name" placeholder="ваше имя" required>
-                        <input type="email" class="form-input form-input-email" placeholder="почта" required>
-                        <input type="tel" class="form-input form-input-phone" placeholder="телефон">
-                        <textarea type="text" class="form-input form-input-text" name="" rows="2" placeholder="сообщение"></textarea>
-                        <div class="form_radio">
-                            <input type="radio" id="male" name="gender">
-                            <label for="male">Даю согласие на обработку персональных данных</label>
-                        </div>
-                        <div class="btn-flex">
-                            <button class="online-reg-btn" type="submit">Отправить&nbsp;сообщение</button>
-                            <p class="online-reg-confirm">Наш оператор перезвонит вам в&nbsp;течение часа</p>
-                        </div>
-                    </form>
-               </div>
-            </div>
-            <div class="online-reg-right">
-                <img src="./img/registration.png"  class="online-reg-pic">
+        <div class="container">
+            <div class="online-reg">
+                <div class="online-reg-left">
+                   <div class="reg-left-wrapper">
+                        <h2 class="online-reg-title">Запись онлайн</h2>
+                        <form class="online-reg-form _white">
+                            <input type="text" class="form-input form-input-name" placeholder="ваше имя" required>
+                            <input type="email" class="form-input form-input-email _serv" placeholder="почта" required>
+                            <input type="tel" class="form-input form-input-phone" placeholder="телефон">
+                            <textarea type="text" class="form-input form-input-text" name="" rows="2" placeholder="сообщение"></textarea>
+                            <div class="form_radio">
+                                <input type="radio" id="male" name="gender">
+                                <label for="male">Даю согласие на обработку персональных данных</label>
+                            </div>
+                            <div class="btn-flex">
+                                <button class="online-reg-btn" type="submit">Отправить&nbsp;сообщение</button>
+                                <p class="online-reg-confirm">Наш оператор перезвонит вам в&nbsp;течение часа</p>
+                            </div>
+                        </form>
+                   </div>
+                </div>
+                <div class="online-reg-right">
+                    <img src="./img/registration.png"  class="online-reg-pic">
+                </div>
             </div>
         </div>
     </section>
@@ -268,6 +339,49 @@
             </div>
         </div>
     </footer>
+    <!-- мобильное меню  -->
+    <div class="modal__mb" id="modal__mb">
+        <div class="modal_window">
+          <div class="modal_box">
+            <button onclick="closeModal()" class="header-modal-close"></button>
+            <!-- <div class="modal_logo"></div> -->
+            <a href="index.html"><img src="./img/logo_mobile.svg" alt="лого"></a>
+            <div class="drop-down drop-down_mobile-menu">
+                <div class="drop-down_pin">
+                  <img src="./img/pin.svg" class="pin" />
+                </div>
+                <select class="menu-select _index">
+                  <option value="">в Павшинской пойме</option>
+                  <!-- <option value="down">Проспект Маршала Жукова</option> -->
+                </select>
+              </div>
+          </div>
+  
+          <div class="burger-link">
+            <a class="modal_link" href="services.html">Услуги</a>
+            <a class="modal_link" href="gallery.html">Галерея</a>
+            <a class="modal_link" href="offers.html">Акции</a>
+            <a class="modal_link" href="certificate.html">сертификаты</a>
+            <a class="modal_link" href="contacts.html">Контакты</a>
+          </div>
+          <form class="search-box search-box_mobile-menu" action="" method="get">
+                <input class="search-txt search-txt_mobile-menu" name="" placeholder="введите слово или фразу" type="search">
+                <button class="search-btn search-btn_mobile-menu" type="submit"></button>
+          </form>
+          <div class="mobile_footer">
+            <ul class="footer__social_moby">
+              <li><a href="#" class="social_mobile fb">facebook</a></li>
+              <li><a href="#" class="social_mobile insta">instagram</a></li>
+              <li><a href="#" class="social_mobile trip">tripadviser</a></li>
+            </ul>
+            <p class="copyright_mobile">
+              &copy;&nbsp;2021&nbsp;Thai&nbsp;Smile&nbsp;Spa
+            </p>
+            </div>
+        </div>
+    </div>
+   
     <script src="script.js"></script>
+    <script src="custom-select.js"></script>
 </body>
 </html>
